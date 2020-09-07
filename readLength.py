@@ -9,6 +9,7 @@ def period_minus(a, b):
 
 def read_bond_length(POSCAR, orderA, orderB, atom_number):
     #orderA and orderB are the order of two atoms
+    #numbers of POSCAR
     with open(POSCAR) as file:
         line = file.readline()
         line = file.readline()
@@ -30,5 +31,4 @@ def read_bond_length(POSCAR, orderA, orderB, atom_number):
     length = math.sqrt(period_minus(A[0], B[0])**2*paraA**2 + period_minus(A[1], B[1])**2*paraB**2 + period_minus(A[2], B[2])**2*paraC**2)
     print(length)
 
-read_bond_length("POSCAR_opted", 3, 9, 16)
-read_bond_length("POSCAR_opted", 5, 9, 16)
+read_bond_length("POSCAR", 3, 9, 16)
